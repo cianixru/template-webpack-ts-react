@@ -1,31 +1,43 @@
 import "core-js/shim";
+import * as OfflinePluginRuntime from "offline-plugin/runtime";
+import createHistory from "history/createBrowserHistory";
 import React from "react";
 import {render} from "react-dom";
-import {AppContainer} from "react-hot-loader";
-import routes from "./routes";
+import {Provider} from "react-redux";
+import {I18nextProvider} from "react-i18next";
+import i18n from "i18n";
+import ReactHotLoader from "components/react-hot-loader";
+import configureStore from "store/configureStore";
+import Router from "router";
 
 import "../styles/global.scss";
 
-const mountElement = document.getElementById("app");
+const history = createHistory();
+const store = configureStore(history);
 
-function renderRoot()
-{
+const mountElement = document.getElementById("mount");
+
+function renderRoot() {
 	render(
-		process.env.NODE_ENV == "production"
-			? routes
-			: (
-				<AppContainer>
-					{routes}
-				</AppContainer>
-			),
+		<ReactHotLoader>
+			<I18nextProvider i18n={i18n}>
+				<Provider store={store}>
+					<Router history={history} />
+				</Provider>
+			</I18nextProvider>
+		</ReactHotLoader>,
 		mountElement
 	);
 }
 
 renderRoot();
 
-// hot reloading in dev
-if (module.hot)
-{
-	module.hot.accept("./routes", renderRoot);
+OfflinePluginRuntime.install();
+
+// HMR in development.
+if ((process.env.NODE_ENV === "development") && module.hot) {
+	module.hot.accept("router", () => {
+		renderRoot();
+		OfflinePluginRuntime.update();
+	});
 }
