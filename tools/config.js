@@ -26,7 +26,7 @@ config.html = {
 		}
 	],
 	/**
-	 * Title of the website
+	 * Title of the application
 	 */
 	title: manifest.name
 };

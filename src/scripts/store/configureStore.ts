@@ -15,8 +15,7 @@ export default (history: History, initialState?: State) => {
 		? createStore<State>(connectRouter(history)(reducer), initialState, enhancers)
 		: createStore<State>(connectRouter(history)(reducer), enhancers);
 
-	if ((process.env.NODE_ENV === "development") && module.hot)
-	{
+	if ((process.env.NODE_ENV === "development") && module.hot) {
 		module.hot.accept("data", () => {
 			store.replaceReducer(connectRouter(history)(reducer));
 		});
