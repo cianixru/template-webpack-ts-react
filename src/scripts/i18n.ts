@@ -11,20 +11,18 @@ function loadLocale(url: string, _: any, callback: Function) {
 export default i18next
 	.use(XHR)
 	.use(LanguageDetector)
-	.init(
-		{
-			backend: {
-				loadPath: "{{lng}}/{{ns}}",
-				parse: (data: any) => data,
-				ajax: loadLocale
-			} as BackendOptions,
-			detection: {
-				caches: []
-			},
-			fallbackLng: "en",
-			interpolation: {
-				escapeValue: false
-			},
-			wait: true
-		}
-	);
+	.init({
+		backend: {
+			loadPath: "{{lng}}/{{ns}}",
+			parse: (data: any) => data,
+			ajax: loadLocale
+		} as BackendOptions,
+		detection: {
+			caches: []
+		},
+		fallbackLng: "en",
+		interpolation: {
+			escapeValue: false
+		},
+		wait: true
+	});
