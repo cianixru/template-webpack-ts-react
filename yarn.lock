@@ -2,6 +2,37 @@
 # yarn lockfile v1
 
 
+"@types/babel-core@*":
+  version "6.7.14"
+  resolved "https://registry.yarnpkg.com/@types/babel-core/-/babel-core-6.7.14.tgz#a08c900a98e8987c1a98d2ea4fa0a1805a7d131f"
+  dependencies:
+    "@types/babel-template" "*"
+    "@types/babel-traverse" "*"
+    "@types/babel-types" "*"
+
+"@types/babel-template@*":
+  version "6.7.14"
+  resolved "https://registry.yarnpkg.com/@types/babel-template/-/babel-template-6.7.14.tgz#8088a56f9d697d620d3d079c3ef66025b7a08d02"
+  dependencies:
+    "@types/babel-types" "*"
+    "@types/babylon" "*"
+
+"@types/babel-traverse@*":
+  version "6.7.16"
+  resolved "https://registry.yarnpkg.com/@types/babel-traverse/-/babel-traverse-6.7.16.tgz#52f475893b8633f653499d745302fa5572a7bd05"
+  dependencies:
+    "@types/babel-types" "*"
+
+"@types/babel-types@*":
+  version "6.7.14"
+  resolved "https://registry.yarnpkg.com/@types/babel-types/-/babel-types-6.7.14.tgz#a8faeb55853724a854f845cfeb357a59fc76d5bf"
+
+"@types/babylon@*":
+  version "6.16.0"
+  resolved "https://registry.yarnpkg.com/@types/babylon/-/babylon-6.16.0.tgz#42f7d60de27259120306d0c7d9e39760013f00ba"
+  dependencies:
+    "@types/babel-types" "*"
+
 "@types/express-serve-static-core@*":
   version "4.0.44"
   resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.0.44.tgz#a1c3bd5d80e93c72fba91a03f5412c47f21d4ae7"
@@ -19,10 +50,6 @@
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.5.0.tgz#2f5c3aad4fbd00f89e99b83083e354bc5308e307"
 
-"@types/history@^2":
-  version "2.0.48"
-  resolved "https://registry.yarnpkg.com/@types/history/-/history-2.0.48.tgz#7e2868c3ad73d83c482f1d68f148c4fdc79c8a79"
-
 "@types/i18next-browser-languagedetector@^0.0.31":
   version "0.0.31"
   resolved "https://registry.yarnpkg.com/@types/i18next-browser-languagedetector/-/i18next-browser-languagedetector-0.0.31.tgz#d92bb9793d8f24560deef59823940946024303e7"
@@ -34,17 +61,17 @@
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@types/i18next-xhr-backend/-/i18next-xhr-backend-1.2.2.tgz#761a2730b4f7e4dde3be96e8efe6ac9df362abcf"
 
-"@types/i18next@*", "@types/i18next@^2.3.37":
-  version "2.3.37"
-  resolved "https://registry.yarnpkg.com/@types/i18next/-/i18next-2.3.37.tgz#dbde9a4209fca92ece9bc33b81cf39b344164160"
+"@types/i18next@*", "@types/i18next@^2.3.38":
+  version "2.3.38"
+  resolved "https://registry.yarnpkg.com/@types/i18next/-/i18next-2.3.38.tgz#eb9bd4f579aefb7a2e86b15e2b8024edaaf4a4c9"
 
 "@types/mime@*":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-0.0.29.tgz#fbcfd330573b912ef59eeee14602bface630754b"
 
-"@types/node@*", "@types/node@^7.0.14":
-  version "7.0.14"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.14.tgz#1470fa002a113316ac9d9ad163fc738c7a0de2a4"
+"@types/node@*", "@types/node@^7.0.15":
+  version "7.0.15"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.15.tgz#628429289604c5f7e56c13f3a0422f3e59df1a17"
 
 "@types/react-dom@^15.5.0":
   version "15.5.0"
@@ -58,13 +85,19 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-i18next@^1.7.7":
-  version "1.7.7"
-  resolved "https://registry.yarnpkg.com/@types/react-i18next/-/react-i18next-1.7.7.tgz#03943653fca2f370c09e0977960026cbadc27710"
+"@types/react-i18next@^1.7.8":
+  version "1.7.8"
+  resolved "https://registry.yarnpkg.com/@types/react-i18next/-/react-i18next-1.7.8.tgz#0338b40a2b5fc631ab3d61152a224002c0bc893e"
   dependencies:
     "@types/i18next" "*"
     "@types/react" "*"
-    "@types/react-router" "^2"
+
+"@types/react-loadable@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@types/react-loadable/-/react-loadable-3.3.0.tgz#041ea51e5a8ad57af135e2c38e7eb9abe270ad3f"
+  dependencies:
+    "@types/babel-core" "*"
+    "@types/react" "*"
 
 "@types/react-redux@^4.4.40":
   version "4.4.40"
@@ -81,18 +114,11 @@
     "@types/react" "*"
     "@types/react-router" "*"
 
-"@types/react-router@*", "@types/react-router@^4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.4.tgz#288455d9e20fb475dc39700b1dbf20b7fea1a2ac"
+"@types/react-router@*", "@types/react-router@^4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.6.tgz#df5770535d07a1e27d4071a246b5b91c79f2555e"
   dependencies:
     "@types/history" "*"
-    "@types/react" "*"
-
-"@types/react-router@^2":
-  version "2.0.49"
-  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-2.0.49.tgz#96f8ad51f07a5890ab35fd55f05170efd132552a"
-  dependencies:
-    "@types/history" "^2"
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^15.0.23":
@@ -309,17 +335,17 @@ autoprefixer@^6.3.1, autoprefixer@^6.7.7:
     postcss "^5.2.16"
     postcss-value-parser "^3.2.3"
 
-awesome-typescript-loader@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-3.1.2.tgz#3df192b91a6285f795ca65e63aad114fbb44f710"
+awesome-typescript-loader@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/awesome-typescript-loader/-/awesome-typescript-loader-3.1.3.tgz#7eb41dfb136c2ea0e099bef038dc70c45f810223"
   dependencies:
     colors "^1.1.2"
     enhanced-resolve "^3.1.0"
-    loader-utils "^1.0.2"
+    loader-utils "^1.1.0"
     lodash "^4.17.4"
     mkdirp "^0.5.1"
     object-assign "^4.1.1"
-    source-map-support "^0.4.11"
+    source-map-support "^0.4.15"
 
 aws-sign2@~0.6.0:
   version "0.6.0"
@@ -1779,9 +1805,9 @@ i18next-xhr-backend@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/i18next-xhr-backend/-/i18next-xhr-backend-1.4.1.tgz#ade99356065f51742da9e4bc79c7bb4905a4b91d"
 
-i18next@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-8.0.0.tgz#487ea70d422e98d0b9ff2246e44bd91d851a46b7"
+i18next@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-8.1.0.tgz#522ed2a6bedafa84ae106409ed520bc216a00bc1"
 
 iconv-lite@~0.4.13:
   version "0.4.16"
@@ -2137,7 +2163,7 @@ loader-utils@0.2.x, loader-utils@^0.2.15, loader-utils@^0.2.16:
     json5 "^0.5.0"
     object-assign "^4.0.1"
 
-loader-utils@^1.0.0, loader-utils@^1.0.1, loader-utils@^1.0.2:
+loader-utils@^1.0.0, loader-utils@^1.0.1, loader-utils@^1.0.2, loader-utils@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.1.0.tgz#c98aef488bcceda2ffb5e2de646d6a754429f5cd"
   dependencies:
@@ -3689,9 +3715,9 @@ source-map-resolve@^0.3.0:
     source-map-url "~0.3.0"
     urix "~0.1.0"
 
-source-map-support@^0.4.11:
-  version "0.4.14"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.14.tgz#9d4463772598b86271b4f523f6c1f4e02a7d6aef"
+source-map-support@^0.4.15:
+  version "0.4.15"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.15.tgz#03202df65c06d2bd8c7ec2362a193056fef8d3b1"
   dependencies:
     source-map "^0.5.6"
 
@@ -3857,9 +3883,9 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
-style-loader@^0.16.1:
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.16.1.tgz#50e325258d4e78421dd9680636b41e8661595d10"
+style-loader@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-0.17.0.tgz#e8254bccdb7af74bd58274e36107b4d5ab4df310"
   dependencies:
     loader-utils "^1.0.2"
 
@@ -3963,9 +3989,9 @@ type-is@~1.6.14:
     media-typer "0.3.0"
     mime-types "~2.1.15"
 
-typescript@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.2.2.tgz#606022508479b55ffa368b58fee963a03dfd7b0c"
+typescript@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.3.2.tgz#f0f045e196f69a72f06b25fd3bd39d01c3ce9984"
 
 typings-for-css-modules-loader@^1.5.0:
   version "1.5.0"
@@ -3990,7 +4016,7 @@ uglify-js@^2.8.5, uglify-js@~2.8.22:
 
 "uglify-js@github:mishoo/UglifyJS2#harmony":
   version "2.8.22"
-  resolved "https://codeload.github.com/mishoo/UglifyJS2/tar.gz/278577f3cb75e72320564805ee91be63e5f9c806"
+  resolved "https://codeload.github.com/mishoo/UglifyJS2/tar.gz/73d6438773a40aa5aa06354781334af79a67e42d"
   dependencies:
     source-map "~0.5.1"
     yargs "~3.10.0"
@@ -4191,6 +4217,12 @@ webpack-sources@^0.2.3:
   dependencies:
     source-list-map "^1.1.1"
     source-map "~0.5.3"
+
+webpack-subresource-integrity@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/webpack-subresource-integrity/-/webpack-subresource-integrity-0.9.0.tgz#3899e2c1f6780c78b92d25d2aa6e334520e951ba"
+  dependencies:
+    webpack-core "^0.6.8"
 
 "webpack-subresource-integrity@github:waysact/webpack-subresource-integrity#remove-deprecated-features":
   version "0.9.0"
