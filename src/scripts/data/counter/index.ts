@@ -9,15 +9,19 @@ const initialState: State = {
 };
 
 export default function reducer(state = initialState, action: Action): State {
-	switch (action.type)
-	{
-		case ActionTypes.INCREASE:
+	switch (action.type) {
+		case ActionTypes.INCREASE: {
 			return {value: state.value + action.payload.value};
-		case ActionTypes.DECREASE:
+		}
+
+		case ActionTypes.DECREASE: {
 			return {value: state.value - action.payload.value};
-		case ActionTypes.SET:
+		}
+
+		case ActionTypes.SET: {
 			return {value: action.payload.value};
-		default:
-			return state;
+		}
+
+		default: return state;
 	}
 }

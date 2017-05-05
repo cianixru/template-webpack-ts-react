@@ -1,7 +1,6 @@
 import {TypedAction} from "data";
 
-export namespace ActionTypes
-{
+export namespace ActionTypes {
 	export const INCREASE = "counter/INCREASE";
 	export const DECREASE = "counter/DECREASE";
 	export const SET = "counter/SET";
@@ -18,24 +17,21 @@ export type Action =
 	| CounterAction<typeof ActionTypes.DECREASE>
 	| CounterAction<typeof ActionTypes.SET>;
 
-export function increase(value: number)
-{
+export function increase(value: number) {
 	return {
 		type: ActionTypes.INCREASE,
 		payload: {value}
 	};
 }
 
-export function decrease(value: number)
-{
+export function decrease(value: number) {
 	return {
 		type: ActionTypes.DECREASE,
 		payload: {value}
 	};
 }
 
-export function set(value: number)
-{
+export function set(value: number) {
 	return {
 		type: ActionTypes.SET,
 		payload: {value}
