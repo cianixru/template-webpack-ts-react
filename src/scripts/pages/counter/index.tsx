@@ -6,7 +6,7 @@ import {increase, decrease, set} from "data/counter/actions";
 
 import style from "./style.scss";
 
-class Counter extends React.Component<StateProps & DispatchProps, OwnState> {
+class Counter extends React.Component<Props, OwnState> {
 	state = {
 		input: 0
 	};
@@ -33,6 +33,8 @@ class Counter extends React.Component<StateProps & DispatchProps, OwnState> {
 		);
 	}
 }
+
+type Props = StateProps & DispatchProps;
 
 interface StateProps {
 	value: number;
