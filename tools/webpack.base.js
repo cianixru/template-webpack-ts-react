@@ -76,9 +76,9 @@ module.exports = {
 			caches: {
 				optional: [":rest:"]
 			},
-			ServiceWorker: {
-				entry: (process.env.NODE_ENV === "development") ? "sw-dev.js" : null
-			},
+			ServiceWorker: (process.env.NODE_ENV === "development") ? {
+				entry: "sw-dev.js"
+			} : {},
 			AppCache: false
 		})
 	]
