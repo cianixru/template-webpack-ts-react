@@ -1,4 +1,6 @@
 {
 	"title": "Inicio",
-	"navigationCounter": "Mostrador"
+	"navigation": {
+		"counter": "Mostrador"
+	}
 }

@@ -1,4 +1,6 @@
 {
 	"title": "Home",
-	"navigationCounter": "Counter"
+	"navigation": {
+		"counter": "Counter"
+	}
 }
