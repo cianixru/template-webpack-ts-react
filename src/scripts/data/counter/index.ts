@@ -1,8 +1,5 @@
 import {ActionTypes, Action} from "./actions";
-
-export interface State {
-	value: number;
-}
+import {State} from "./model";
 
 const initialState: State = {
 	value: 0
@@ -25,3 +22,6 @@ export default function reducer(state = initialState, action: Action): State {
 		default: return state;
 	}
 }
+
+export * from "./actions";
+export * from "./model";

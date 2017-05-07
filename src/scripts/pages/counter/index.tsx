@@ -2,7 +2,7 @@ import React from "react";
 import {Action, Dispatch} from "redux";
 import {connect} from "react-redux";
 import {State} from "data";
-import {increase, decrease, set} from "data/counter/actions";
+import {increase, decrease, set} from "data/counter";
 
 import style from "./style.scss";
 
