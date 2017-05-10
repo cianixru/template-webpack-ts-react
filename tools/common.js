@@ -37,7 +37,7 @@ module.exports = {
 			{
 				loader: "sass-loader",
 				options: {
-					sourceMap: true,
+					sourceMap: process.env.NODE_ENV === "development",
 					includePaths: [resolve(__dirname, join("..", paths.src, paths.stylesName))]
 				}
 			}

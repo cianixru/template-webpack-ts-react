@@ -1,11 +1,14 @@
 import React from "react";
-import {Action, Dispatch} from "redux";
+import Helmet from "react-helmet";
 import {connect} from "react-redux";
+import {translate, InjectedTranslateProps} from "react-i18next";
+import {Action, Dispatch} from "redux";
 import {State} from "data";
 import {increase, decrease, set} from "data/counter";
 
 import style from "./style.scss";
 
+@translate("counter")
 class Counter extends React.Component<Props, OwnState> {
 	state = {
 		input: 0
@@ -17,8 +20,12 @@ class Counter extends React.Component<Props, OwnState> {
 	};
 
 	render() {
+		const t = this.props.t!;
+
 		return (
 			<section className={style.container}>
+				<Helmet title={t("title")} />
+
 				<h2>{this.props.value}</h2>
 				<div className={style.controls}>
 					<button onClick={this.props.decrease.bind(this, 1)}>-</button>
@@ -34,7 +41,7 @@ class Counter extends React.Component<Props, OwnState> {
 	}
 }
 
-type Props = StateProps & DispatchProps;
+type Props = StateProps & DispatchProps & OwnProps;
 
 interface StateProps {
 	value: number;
@@ -44,6 +51,10 @@ interface DispatchProps {
 	increase(value: number): void;
 	decrease(value: number): void;
 	set(value: number): void;
+}
+
+interface OwnProps extends InjectedTranslateProps {
+
 }
 
 interface OwnState {
@@ -60,4 +71,4 @@ const mapDispatchToProps = (dispatch: Dispatch<Action>) => ({
 	set: (value: number) => dispatch(set(value))
 });
 
-export default connect<StateProps, DispatchProps, {}>(mapStateToProps, mapDispatchToProps)(Counter);
+export default connect<StateProps, DispatchProps, OwnProps>(mapStateToProps, mapDispatchToProps)(Counter);
