@@ -25,8 +25,13 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(png|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				loader: "url-loader?limit=10000"
+				test: /\.(woff|woff2|eot|ttf)$/i,
+				loader: "file-loader"
+			},
+
+			{
+				test: /\.(gif|png|jpe?g|svg)$/i,
+				loaders: common.loaders.images
 			},
 
 			{
@@ -73,12 +78,10 @@ module.exports = {
 			autoUpdate: true,
 			version: "[hash]",
 			excludes: ["*.hot-update.*"],
+			responseStrategy: (process.env.NODE_ENV === "development") ? "network-first" : "cache-first",
 			caches: {
 				optional: [":rest:"]
 			},
-			ServiceWorker: (process.env.NODE_ENV === "development") ? {
-				entry: "sw-dev.js"
-			} : {},
 			AppCache: false
 		})
 	]

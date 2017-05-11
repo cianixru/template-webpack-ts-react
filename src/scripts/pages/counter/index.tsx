@@ -17,7 +17,7 @@ class Counter extends React.Component<Props, OwnState> {
 	onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.valueAsNumber;
 		this.props.set(Number.isFinite(value) ? value : this.props.value);
-	};
+	}
 
 	render() {
 		const t = this.props.t!;

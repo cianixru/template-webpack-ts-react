@@ -37,8 +37,19 @@ module.exports = {
 			{
 				loader: "sass-loader",
 				options: {
-					sourceMap: process.env.NODE_ENV === "development",
+					sourceMap: true,
 					includePaths: [resolve(__dirname, join("..", paths.src, paths.stylesName))]
+				}
+			}
+		],
+		images: [
+			"file-loader",
+
+			{
+				loader: "image-webpack-loader",
+				options: {
+					// Only optimize in production.
+					bypassOnDebug: true
 				}
 			}
 		]
