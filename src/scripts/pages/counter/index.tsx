@@ -41,7 +41,7 @@ class Counter extends React.Component<Props, OwnState> {
 	}
 }
 
-type Props = StateProps & DispatchProps & OwnProps;
+type Props = StateProps & DispatchProps & OwnProps & InjectedTranslateProps;
 
 interface StateProps {
 	value: number;
@@ -53,7 +53,7 @@ interface DispatchProps {
 	set(value: number): void;
 }
 
-interface OwnProps extends InjectedTranslateProps {
+interface OwnProps {
 
 }
 
