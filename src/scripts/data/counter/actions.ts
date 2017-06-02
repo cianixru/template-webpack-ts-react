@@ -17,27 +17,27 @@ interface CounterAction<T extends string> extends TypedAction<T> {
 export type Action =
 	| CounterAction<ActionTypes>;
 
-export const increase = (value: number) => ({
+export const increase = (value: number): Action => ({
 	type: ActionTypes.INCREASE,
 	payload: {value}
 });
 
-export const decrease = (value: number) => ({
+export const decrease = (value: number): Action => ({
 	type: ActionTypes.DECREASE,
 	payload: {value}
 });
 
-export const increaseAsync = (value: number) => ({
+export const increaseAsync = (value: number): Action => ({
 	type: ActionTypes.INCREASE_ASYNC,
 	payload: {value}
 });
 
-export const decreaseAsync = (value: number) => ({
+export const decreaseAsync = (value: number): Action => ({
 	type: ActionTypes.DECREASE_ASYNC,
 	payload: {value}
 });
 
-export const set = (value: number) => ({
+export const set = (value: number): Action => ({
 	type: ActionTypes.SET,
 	payload: {value}
 });

@@ -39,7 +39,7 @@ export const epic = (actions$: ActionsObservable<Action>) => actions$
 				return decrease(action.payload.value);
 			}
 
-			default: return undefined;
+			default: return;
 		}
 	});
 
