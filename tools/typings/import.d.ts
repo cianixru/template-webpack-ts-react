@@ -1,9 +1,10 @@
 declare global {
-  interface System {
-    import (request: string): Promise<any>
-  }
+	interface System {
+		import(request: string): Promise<any>;
+	}
 
-  const System: System
+	const System: System;
 }
 
 export {};
+
