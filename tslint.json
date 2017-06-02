@@ -1,5 +1,5 @@
 {
-	"extends": ["tslint:latest", "tslint-react"],
+	"extends": ["tslint:recommended", "tslint-react"],
 	"rules": {
 		"jsx-alignment": true,
 		"jsx-boolean-value": [true, "never"],
@@ -38,6 +38,7 @@
 		"no-empty-interface": false,
 		"no-namespace": false,
 		"no-object-literal-type-assertion": false,
+		"prefer-conditional-expression": false,
 
 		"curly": false,
 		"no-console": [false],
