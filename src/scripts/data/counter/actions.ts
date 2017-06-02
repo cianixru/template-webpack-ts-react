@@ -1,9 +1,11 @@
 import {TypedAction} from "data";
 
-export namespace ActionTypes {
-	export const INCREASE = "counter/INCREASE";
-	export const DECREASE = "counter/DECREASE";
-	export const SET = "counter/SET";
+export enum ActionTypes {
+	INCREASE = "counter/INCREASE",
+	DECREASE = "counter/DECREASE",
+	INCREASE_ASYNC = "counter/INCREASE_ASYNC",
+	DECREASE_ASYNC = "counter/DECREASE_ASYNC",
+	SET = "counter/SET"
 }
 
 interface CounterAction<T extends string> extends TypedAction<T> {
@@ -13,27 +15,29 @@ interface CounterAction<T extends string> extends TypedAction<T> {
 }
 
 export type Action =
-	| CounterAction<typeof ActionTypes.INCREASE>
-	| CounterAction<typeof ActionTypes.DECREASE>
-	| CounterAction<typeof ActionTypes.SET>;
+	| CounterAction<ActionTypes>;
 
-export function increase(value: number) {
-	return {
-		type: ActionTypes.INCREASE,
-		payload: {value}
-	};
-}
+export const increase = (value: number) => ({
+	type: ActionTypes.INCREASE,
+	payload: {value}
+});
 
-export function decrease(value: number) {
-	return {
-		type: ActionTypes.DECREASE,
-		payload: {value}
-	};
-}
+export const decrease = (value: number) => ({
+	type: ActionTypes.DECREASE,
+	payload: {value}
+});
 
-export function set(value: number) {
-	return {
-		type: ActionTypes.SET,
-		payload: {value}
-	};
-}
+export const increaseAsync = (value: number) => ({
+	type: ActionTypes.INCREASE_ASYNC,
+	payload: {value}
+});
+
+export const decreaseAsync = (value: number) => ({
+	type: ActionTypes.DECREASE_ASYNC,
+	payload: {value}
+});
+
+export const set = (value: number) => ({
+	type: ActionTypes.SET,
+	payload: {value}
+});
