@@ -5,11 +5,10 @@ const paths = {
 	dist: resolve("dist"),
 	htmlIndex: `${ROOT}/assets/index.ejs`,
 	icon: `${ROOT}/assets/icon.png`,
-	scriptsName: "scripts",
 	src: ROOT,
 	stylesName: "styles",
 	static: `${ROOT}/assets/static`,
-	get tsIndex() { return `${ROOT}/${this.scriptsName}/index.tsx`; }
+	get tsIndex() { return `${ROOT}/index.tsx`; }
 };
 
 module.exports = {

@@ -43,8 +43,8 @@ module.exports = Object.assign(base, {
 			}
 		}),
 		new webpack.DefinePlugin({
-            "process.env.NODE_ENV": `"production"`
-        }),
+			"process.env.NODE_ENV": `"production"`
+		}),
 		new ExtractTextPlugin("[contenthash].css"),
 		new SriPlugin({
 			enabled: true,

@@ -10,7 +10,7 @@ import {AppContainer} from "react-hot-loader";
 import configureStore from "store/configureStore";
 import Router from "router";
 
-import "../styles/global.scss";
+import "styles/global.scss";
 
 const history = createHistory();
 const store = configureStore(history);

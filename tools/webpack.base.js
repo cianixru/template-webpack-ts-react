@@ -19,7 +19,7 @@ module.exports = {
 		extensions: [".ts", ".tsx", ".js"],
 		modules: [
 			"node_modules",
-			resolve(__dirname, join("..", common.paths.src, common.paths.scriptsName))
+			resolve(__dirname, join("..", common.paths.src))
 		]
 	},
 	module: {
@@ -32,11 +32,6 @@ module.exports = {
 			{
 				test: /\.(gif|png|jpe?g|svg)$/i,
 				loaders: common.loaders.images
-			},
-
-			{
-				test: /\.json$/,
-				loader: "json-loader"
 			}
 		]
 	},

@@ -42,12 +42,16 @@ module.exports = Object.assign(base, {
 			/.*\.scss\.d\.ts/
 		]),
 		new webpack.DefinePlugin({
-            "process.env.NODE_ENV": `"development"`
-        }),
+			"process.env.NODE_ENV": `"development"`
+		}),
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoEmitOnErrorsPlugin(),
 		new webpack.NamedModulesPlugin(),
-		new FriendlyErrorsPlugin(),
+		new FriendlyErrorsPlugin({
+			compilationSuccessInfo: {
+				messages: ['Dev server running at http://localhost:3000']
+			}
+		}),
 		new CheckerPlugin()
 	]),
 	devtool: "eval-source-map"

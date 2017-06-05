@@ -1,6 +1,6 @@
 import {ActionsObservable} from "redux-observable";
-import "rxjs/add/operator/delay";
-import "rxjs/add/operator/map";
+import "common/rxjs";
+
 import {Action, ActionTypes, increase, decrease} from "./actions";
 import {State} from "./model";
 

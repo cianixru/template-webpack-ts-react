@@ -1,10 +1,10 @@
 import React from "react";
 import Helmet from "react-helmet";
 import {Route} from "react-router";
-import Loadable from "loadable";
+import Loadable from "common/loadable";
 
 import style from "./style.scss";
-import manifest from "../../../assets/static/manifest.json";
+import manifest from "assets/static/manifest.json";
 import Home from "pages/home";
 
 export default class App extends React.Component<any, any> {
